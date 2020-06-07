@@ -1,0 +1,52 @@
+$customgreen: #778573
+$picturewidth: 25vw
+
+=scalefadein($scale)
+  transition: .2s
+  transform: scale($scale)
+  opacity: 0
+
+%center
+  display: block
+  margin-left: auto
+  margin-right: auto
+  margin-top: 10px
+  margin-bottom: 10px
+  height: auto
+
+a
+  text-decoration: none
+  color: black
+
+nav
+  border-bottom: solid black
+  ul
+    //applies specifically to ul in nav
+    li
+      margin: 10px
+      list-style: none
+      display: inline
+
+#testpattern1
+  @extend %center
+  width: $picturewidth
+
+#testpattern2
+  @extend %center
+  width: $picturewidth * 1.5
+
+img:hover
+  +scalefadein(1.02)
+
+
+h1
+  color: $customgreen
+
+#red
+  color: red
+
+.green
+  color: green
+
+.grey
+  color: grey
